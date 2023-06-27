@@ -10,7 +10,7 @@ export default function Accordion({ count, item }) {
 
   return (
     <div className="accordion">
-      <div className={showDetail ? "item open" : "item"} onClick={handleToggle}>
+      <div className={`item ${showDetail && "open"}`} onClick={handleToggle}>
         <p className="number">
           {count < 10 && "0"}
           {count}
