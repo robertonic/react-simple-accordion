@@ -1,4 +1,5 @@
 import "./styles.css";
+import Accordion from "./components/Accordion";
 
 const faqs = [
   {
@@ -21,8 +22,4 @@ export default function App() {
       <Accordion />
     </div>
   );
-}
-
-function Accordion() {
-  return <div>TODO</div>;
 }
