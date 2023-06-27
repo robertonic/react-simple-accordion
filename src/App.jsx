@@ -18,10 +18,12 @@ const faqs = [
 
 export default function App() {
   return (
-    <ul>
-      {faqs.map((item) => {
-        return <Accordion key={item.title} item={item} />;
-      })}
-    </ul>
+    <div className="content-box">
+      <ol>
+        {faqs.map((item, index) => {
+          return <Accordion count={index + 1} key={item.title} item={item} />;
+        })}
+      </ol>
+    </div>
   );
 }
