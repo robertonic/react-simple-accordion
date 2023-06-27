@@ -9,13 +9,21 @@ export default function Accordion({ count, item }) {
   };
 
   return (
-    <li className="item">
-      <content-box className="number">
+    <li className="accordion">
+      <div className="item">
         {count}
         <div className="title">{item.title}</div>{" "}
         <div onClick={flipDetail}>&oplus;</div>
-        {showDetail && <span>{item.text}</span>}
-      </content-box>
+        {showDetail ? (
+          <div className="content-box">
+            <span>{item.text}</span>
+          </div>
+        ) : (
+          <ul>
+            <div className="content-box"></div>
+          </ul>
+        )}
+      </div>
     </li>
   );
 }
