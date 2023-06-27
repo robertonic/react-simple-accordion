@@ -1,3 +1,3 @@
-export default function Accordion() {
-  return <div>Accordion</div>;
+export default function Accordion({ item }) {
+  return <li className="card">{item.title}</li>;
 }

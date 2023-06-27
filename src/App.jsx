@@ -18,8 +18,10 @@ const faqs = [
 
 export default function App() {
   return (
-    <div>
-      <Accordion />
-    </div>
+    <ul>
+      {faqs.map((item) => {
+        return <Accordion key={item.title} item={item} />;
+      })}
+    </ul>
   );
 }
