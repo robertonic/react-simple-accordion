@@ -21,7 +21,9 @@ export default function App() {
     <div className="content-box">
       <ol>
         {faqs.map((item, index) => {
-          return <Accordion count={index + 1} key={item.title} item={item} />;
+          return (
+            <Accordion count={index + 1} key={item.title + index} item={item} />
+          );
         })}
       </ol>
     </div>
